@@ -1,0 +1,534 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* basic elements */
+
+*{
+   margin:0;
+   padding:0;
+   list-style:none;
+   box-sizing:border-box;
+}
+
+:root{
+
+  /* 內外距級數 */
+  --s0: 0 !important;
+  --s1: .25rem !important;
+  --s2: .5rem !important;
+  --s3: 1rem !important;
+  --s4: 1.5rem !important;
+  --s5: 3rem !important;
+}
+
+
+html,
+body{
+   /* font: 75% 'Source Sans Pro', sans-serif; */
+   /* font: 90% 'M PLUS 1p', sans-serif; */
+   font: 95% 'Alegreya Sans SC', sans-serif ;
+   color:slategrey;
+   font-weight: 500;
+}
+
+
+body {
+   margin: auto;
+   padding: 0;
+   line-height: 1.88889;
+   color: #555a50;
+   background:#382e05;
+   /* background-image: url('../images/outer/woman1.jpg') no-repeat; */
+} 
+
+
+/* 文字細節 */
+p {
+   margin-top: 0;
+   text-align: justify;
+   text-indent: 2em;
+   font-family: 'Itim', cursive;
+} 
+h3 {
+   font: 2rem 'Mansalva', cursive;
+   font-weight: bold;
+   letter-spacing: 1px;
+   margin-top:1%;
+   margin-bottom: 0;
+   color: #7d775c;
+}  
+a:link {
+   font-weight: bold;
+   text-decoration: none;
+   color: #c4a624;
+}
+a:visited {
+   font-weight: bold;
+   text-decoration: none;
+   color: #d4cddc;
+}
+a:hover,
+a:focus,
+a:active {
+   color: #2d350f;
+}
+abbr {
+   border-bottom: none;
+} 
+
+
+/* ========================================== */
+
+/* specific divs */
+#page-wrapper {
+   width:100%;
+   margin:auto;
+   background-image:url('/images/brick.jpg');
+  background-size: contain;
+   display:flex;
+   flex-direction: column;
+   flex-wrap:wrap;
+   justify-content:center;
+   align-items: flex-end;
+   position:relative;
+}
+
+.extra1{
+   position:fixed;
+   background-image:url(/images/collage.png);
+   background-size:cover;
+   top:0;
+   left:0;
+   height: 100%;
+   width: 30%;
+   z-index: 1;
+}
+
+
+
+/* 標題logo區 */
+#zen-intro {
+   width:100%;
+   /* align-self:center; */
+   align-self: flex-start;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
+   flex-wrap:nowrap;
+   /* background:url('/images/banner.png') no-repeat center top/contain; */
+}
+
+
+#banner {
+   width:100%;
+   /* background-color:var(--white75); */
+   margin-top:var(--s5);
+   /* padding:var(--s5); */
+   display:flex;
+   flex-direction:column;
+   flex-wrap:wrap;
+   align-self:flex-end;
+   height:500px;
+   background-image:url('/images/banner小.png');
+   background-position: center ;
+   background-size: contain;
+   background-repeat:no-repeat; 
+   /* background:green; */
+}
+
+
+#banner h1 {
+   display: none;
+} 
+
+
+
+#banner h2 {
+   display: none;
+} 
+
+/* A demonstration */
+.summary {   
+   top:0;
+   /* background:green; */
+   padding:var(--s3);
+   width: 100%;
+   height: 500px;
+   margin-bottom:0;
+}
+.summary p {
+  color:rgb(0, 0, 0);
+  /* margin-top:var(--s5); */
+   padding:var(--s2);
+   font-family: 'Mansalva', cursive, 'Itim', cursive,'Alegreya Sans SC', sans-serif ;
+   font-size:xx-large;
+   font-weight: 800;
+   text-align: center;
+}
+
+
+/* The Road to Enlightenment */
+#zen-preamble {
+   margin-top: var(--s1);
+   width:100%;
+   height: 600px;
+   padding: var(--s5);
+   /* background-color: palegreen; */
+   background-image:url(/images/inner/whitebrush.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   /* background:red; */
+}
+
+/* .extra2{
+   background-image:url(/images/影像/enlightment.gif);
+} */
+
+#zen-preamble h3{
+margin-top:var(--s5);
+ text-align:center;
+}
+
+
+#zen-preamble p{
+  width:70%;
+  margin: auto;
+  padding: var(--s3);
+}
+
+/* -------------------------------------------------------------- */
+
+/* 主文 */
+#zen-supporting {
+   display:flex;
+   flex-direction:column;
+   justify-content:space-evenly;
+   padding: var(--s5);
+}
+
+#zen-supporting div:nth-child(even){
+   display:flex;
+   flex-direction:column;
+   align-items:flex-end;
+   padding: var(--s5);
+   margin:var(--s4);
+   /* background:orange; */
+}
+
+
+#zen-explanation{
+   padding: var(--s5);
+   background-image:url(/images/inner/thumbtack3.png);
+   background-repeat: no-repeat;
+   background-position:center;
+   background-size: contain;
+   /* background-color: red; */
+}
+
+#zen-explanation h3{
+   /* display:none; */
+   margin:auto;
+}
+
+
+#zen-explanation p{
+   width:50%;
+   padding: var(--s3);
+   margin:auto;
+  /* background:var(--white50); */
+}
+
+#zen-participation{
+  /* background-color: red; */
+  background-image:url(/images/inner/thumbtack.png);
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-position:center;
+   width:100%;
+}
+
+#zen-participation h3{
+   /* display: none; */
+   text-align:center;
+   margin-top:var(--s1);
+}
+
+#zen-participation p{
+   width:70%;
+   padding: var(--s3);
+   margin:auto;
+}
+
+#zen-benefits{
+   background-image:url(/images/inner/blackbrush.png);
+   background-repeat: repeat-x;
+   background-size: cover;
+   background-position:center;
+   width:100%;
+   height:400px;
+   position:relative;
+   /* background:red; */
+}
+
+
+#zen-benefits h3{
+   /* display:none; */
+   position:absolute;
+   color:white;
+   /* background:red; */
+   right:10%;
+   top:10%;
+   text-align:right;
+}
+
+
+#zen-benefits p{
+   width:100%;
+   position:absolute;
+   top:30%;
+   left:20%;
+   /* transform:rotate(10%); */
+   padding: var(--s3);
+   /* background:var(--white75); */
+   color:white;
+}
+
+#zen-requirements{
+   width:100%;
+   margin:0;
+   /* background-color:red; */
+   background-image:url(/images/inner/thumbtack2.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position:center;
+}
+
+
+
+
+#zen-requirements p{
+   width:100%;
+   padding: var(--s3);
+   margin:auto;
+}
+
+/* 頁尾 */
+footer {
+   display:block;
+   text-align: center;
+   margin-top:2%;
+   float:right;
+   
+}
+footer a:link,
+footer a:visited {
+  transform:rotate(10deg);
+  display:inline-block;
+  background:url(/images/inner/whitebrush.png) no-repeat center/contain;
+  padding:var(--s3);
+   font-size:1.5rem;
+   margin-right: 20px;
+   color:#2d350f;
+}
+
+footer a:hover{
+  transform:scale(1.5);
+  transition:0.5s;
+}
+
+/* ---------------------------------------------------------- */
+/* 選單區 */
+#sidebar {
+   display:flex;
+   justify-content: flex-start;
+   align-items:flex-end;
+   order:2;
+   margin-bottom: var(--s5);
+   /* background-image:url('/images/outer/tiffany2.jpg'); */
+   background-repeat: no-repeat;
+   background-size: 50%;
+   background-position:center right;
+}
+#sidebar #wrapper {
+   display:flex;
+   flex-direction: row;
+   align-items:flex-start;
+   font: 95% 'Alegreya Sans SC', sans-serif ;
+   font-weight: 500;
+   /* background:var(--white75); */
+   padding: var(--s3);
+   margin:var(--s5);
+   width: 100%;
+}
+
+.sidebar h3{
+   font-size:1.3rem;
+   background:url(/images/inner/blackbrush.png) no-repeat center/cover;
+   text-align:center;
+   color:white;
+}
+
+#design-selection{
+   flex-grow:1;
+
+  /* background:red; */
+ 
+}
+#design-archives{
+   flex-grow:1;
+   align-self:flex-end;
+}
+#zen-resources{
+   flex-grow:1;
+
+   /* background:grey; */
+}
+ 
+
+.sidebar ul {
+   margin: 1%;
+   padding: 0;
+}
+.sidebar li {
+  font: 95% 'Alegreya Sans SC', sans-serif ;
+   font-weight: 500;
+   /* font: 1rem 'M PLUS 1p', sans-serif; */
+   margin-left:5%;
+   display: block;
+   list-style-type: none;
+}
+.sidebar li a:link {
+   font-weight:800;
+   color: #221e0b;
+}
+.sidebar li a:hover,
+a:focus,
+a:active {
+   color: #e2e9c8;
+}
+.sidebar li a:visited {
+   color: #b3ae94;
+} 
+
+
+
+#zen-intro,
+#zen-supporting{
+   width:100%;
+}
+
+#sidebar{
+  width:100%;
+}
+
+
+
+/* 網頁版 */
+@media(min-width:992px){
+   #page-wrapper {
+      width:70%;
+      display:flex;
+      flex-direction: column;
+      flex-wrap:wrap;
+      justify-content:space-around;
+      align-items: flex-end;
+   }
+
+   .extra1{
+      position:fixed;
+      background-image:url(/images/collage.png);
+      background-size:cover;
+      /* filter:opacity(0.5); */
+      top:0;
+      left:15%;
+      height: 100%;
+      width: 30%;
+      z-index: 1;
+   }
+   
+   #zen-intro{
+      width:80%;
+      /* height:500px; */
+      align-self: flex-end;
+      display:flex;
+      flex-direction:column;
+      flex-wrap:wrap;
+      padding:var(--s3);
+      /* background:green; */
+   }
+
+
+   #zen-intro #banner{
+    width:60%;
+    height:700px;
+    background-image:url('/images/banner.png');
+    /* align-self: flex-start; */
+    /* background:green; */
+   }
+
+   #zen-intro #zen-summary{
+    /* margin:var(--s5); */
+    /* margin-top:40px; */
+    width:100%;
+    /* order:-1; */
+    align-self:center;
+    /* background:red; */
+   }
+
+   .summary p {
+    padding:var(--s2);
+    text-align: right;
+    
+    }
+
+
+
+   #zen-intro header{
+      width:100%;
+      background-size: cover;
+      height:350px;
+      font-size:3rem;
+   }
+
+   /* 主文 */
+   #zen-supporting{
+    width:70%;
+   }
+
+   #zen-explanation p,
+   #zen-explanation h3{
+      width:70%;
+   }
+
+   #zen-participation p, 
+   #zen-participation h3{
+      width:70%;
+   }
+
+   #zen-benefits p, 
+   #zen-benefits h3{
+      width: 50%;
+   }
+
+   #zen-requirements p, 
+   #zen-requirements h3{
+      width: 70%;
+   }
+
+   #sidebar{
+
+    width:60%;
+    justify-content: flex-start;
+  }
+  #sidebar #wrapper {
+   width: 100%;
+}
+
+}
